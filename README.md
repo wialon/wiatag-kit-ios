@@ -26,4 +26,4 @@ agrishanovich, development@gurtam.com
 
 ## License
 
-WiaTagKit is available under the MIT license. See the LICENSE file for more info.
+WiaTagKit is available under the CC BY-ND 4.0 license. See the LICENSE file for more info.

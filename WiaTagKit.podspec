@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'WiaTagKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of WiaTagKit.'
+  s.summary          = 'WiaTagKit is a lib.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,23 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+WiaTagKit is a lib for sending data for Wialon service.
                        DESC
 
-  s.homepage         = 'https://github.com/agrishanovich/WiaTagKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'agrishanovich' => 'development@gurtam.com' }
-  s.source           = { :git => 'https://github.com/agrishanovich/WiaTagKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
+  s.homepage         = 'https://github.com/wialon/wiatag-kit-ios'
+  s.license          = { :type => 'CC BY-ND 4.0', :file => 'LICENSE' }
+  s.author           = { 'wialon' => 'development@gurtam.com' }
+  s.source           = { :git => "https://github.com/wialon/wiatag-kit-ios.git", :tag => s.version.to_s }
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'WiaTagKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'WiaTagKit' => ['WiaTagKit/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = 'WiaTagKit/Classes/*.{h,m}'
+  
+  s.library = 'z'
+  s.vendored_libraries = 'WiaTagKit/libWiaTagSending.a'
+  s.requires_arc = true
+  
+  s.frameworks = 'UIKit', 'CoreLocation', 'Foundation'
+  s.dependency 'CocoaAsyncSocket', '7.6.3'
 end
