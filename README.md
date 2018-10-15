@@ -1,8 +1,6 @@
 # WiaTagKit
 
-[![CI Status](https://img.shields.io/travis/agrishanovich/WiaTagKit.svg?style=flat)](https://travis-ci.org/agrishanovich/WiaTagKit)
 [![Version](https://img.shields.io/cocoapods/v/WiaTagKit.svg?style=flat)](https://cocoapods.org/pods/WiaTagKit)
-[![License](https://img.shields.io/cocoapods/l/WiaTagKit.svg?style=flat)](https://cocoapods.org/pods/WiaTagKit)
 [![Platform](https://img.shields.io/cocoapods/p/WiaTagKit.svg?style=flat)](https://cocoapods.org/pods/WiaTagKit)
 
 ## Example
