@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WiaTagKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'WiaTagKit is a lib.'
 
 # This description is used to generate tags and improve search results.
@@ -36,5 +36,5 @@ WiaTagKit is a lib for sending data for Wialon service.
   s.requires_arc = true
   
   s.frameworks = 'UIKit', 'CoreLocation', 'Foundation'
-  s.dependency 'CocoaAsyncSocket', '7.6.3'
+  s.dependency 'CocoaAsyncSocket', '~> 7.6.3'
 end

@@ -26,10 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
  * Use this init method to setup WTMessageSender object.
  @param host is a host.
  @param port is a port.
- @param userId is a userId
- @param password is a password
+ @param unitId is a unitId.
+ @param password is a password.
  */
-- (instancetype)initWithHost:(NSString *)host port:(NSUInteger)port userId:(NSString *)userId password:(NSString * _Nullable)password;
+- (instancetype)initWithHost:(NSString *)host port:(NSUInteger)port unitId:(NSString *)unitId password:(NSString * _Nullable)password;
 /**
  * Function that sends single message.
  @param message a WTMessage object.
