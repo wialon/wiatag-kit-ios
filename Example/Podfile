@@ -1,8 +1,14 @@
 platform :ios, '10.0'
+inhibit_all_warnings!
 
 use_frameworks!
-target 'WiaTagKit_Tests' do
+
+target 'WiaTagKit_Example' do
   pod 'WiaTagKit', :path => '../'
-  
-  
+
+  target 'WiaTagKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
 end
