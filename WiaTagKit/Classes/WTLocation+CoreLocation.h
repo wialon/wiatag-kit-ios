@@ -15,6 +15,8 @@
 #import "WTLocation.h"
 #import <CoreLocation/CoreLocation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
 * Initializer that allows init WTLocation with CLLocation object in a simple way.
 */
@@ -23,3 +25,5 @@
 - (instancetype)initWithLocation:(CLLocation *)location;
 
 @end
+
+NS_ASSUME_NONNULL_END

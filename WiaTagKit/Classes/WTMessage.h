@@ -23,14 +23,6 @@ typedef void (^builderBlock)(WTMessageBuilder * _Nonnull);
 */
 @interface WTMessage : NSObject
 
-@property (nonatomic, readonly, nullable) NSDate *time;
-@property (nonatomic, readonly, nullable) WTLocation *location;
-@property (nonatomic, readonly) BOOL isSos;
-@property (nonatomic, readonly, nullable) WTImage *image;
-@property (nonatomic, readonly, nullable) NSString *text;
-@property (nonatomic, readonly, nullable) NSDictionary<NSString *, NSString *> *params;
-@property (nonatomic, readonly, nullable) NSNumber *batteryLevel;
-
 /**
 * Initializes message with builderBlock. You should setup a WTMessageBuilder inside this block.
 */
