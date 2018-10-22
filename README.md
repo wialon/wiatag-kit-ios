@@ -20,7 +20,7 @@ pod 'WiaTagKit'
 
 ## Author
 
-agrishanovich, development@gurtam.com
+Gurtam, development@gurtam.com
 
 ## License
 
