@@ -1,6 +1,6 @@
 //
-//  WiaTagSendingLib.h
-//  WiaTagSendingLib
+//  WTMessageSenderEmpty.m
+//  SendWiaTagData
 //
 /*
  WiaTagKit (c) by Gurtam
@@ -12,4 +12,21 @@
  work. If not, see <http://creativecommons.org/licenses/by-nd/4.0/>.
  */
 
+#import <Foundation/Foundation.h>
 #import "WTMessageManager.h"
+
+@implementation WTMessageManager (ForcedLoading)
+
+@end
+
+@implementation WTMessage (ForcedLoading)
+
+@end
+
+@implementation WTImage (ForcedLoading)
+
+@end
+
+@implementation WTLocation (ForcedLoading)
+
+@end

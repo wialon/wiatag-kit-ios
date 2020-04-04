@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0478785921779F0A0078EFA6 /* free_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0478785821779F0A0078EFA6 /* free_image.jpg */; };
-		3195892304923381AF8359B0 /* Pods_WiaTagKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496F2CAC0B6D309DFF302FCF /* Pods_WiaTagKit_Tests.framework */; };
-		605073AA966A5670BB6E7FCE /* Pods_WiaTagKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628FB9411A7717A58DE78C39 /* Pods_WiaTagKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		7DFE84FA4D14437FF7759F32 /* Pods_WiaTagKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65A69B11F917AADF31729CA /* Pods_WiaTagKit_Tests.framework */; };
+		8827FE0C9AB6EFEBBF5DB795 /* Pods_WiaTagKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73CDDB465464D5888B28197 /* Pods_WiaTagKit_Example.framework */; };
+		CE14CD1524386C66007FBAAF /* PeriodicallyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14CD1324386C66007FBAAF /* PeriodicallyTimer.swift */; };
+		CE14CD1624386C66007FBAAF /* PeriodicallyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14CD1324386C66007FBAAF /* PeriodicallyTimer.swift */; };
+		CE14CD1724386C66007FBAAF /* DuplicationValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14CD1424386C66007FBAAF /* DuplicationValidator.swift */; };
+		CE14CD1824386C66007FBAAF /* DuplicationValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14CD1424386C66007FBAAF /* DuplicationValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,9 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01CEC9BA9FC7DAF98F9F2223 /* Pods-WiaTagKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiaTagKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiaTagKit_Tests/Pods-WiaTagKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0478785821779F0A0078EFA6 /* free_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = free_image.jpg; sourceTree = "<group>"; };
-		496F2CAC0B6D309DFF302FCF /* Pods_WiaTagKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiaTagKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E3FD7737977DAC21CD51424 /* Pods-WiaTagKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiaTagKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WiaTagKit_Tests/Pods-WiaTagKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CC3E8FD2000C924D7E2BF29 /* Pods-WiaTagKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiaTagKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-WiaTagKit_Example/Pods-WiaTagKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WiaTagKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiaTagKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,13 +46,15 @@
 		607FACE51AFB9204008FA782 /* WiaTagKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiaTagKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		628FB9411A7717A58DE78C39 /* Pods_WiaTagKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiaTagKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		887D0CFC17B9C3912AD40F38 /* Pods-WiaTagKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiaTagKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiaTagKit_Example/Pods-WiaTagKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		88E66AD1ECE19C0F9611AD9F /* Pods-WiaTagKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiaTagKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiaTagKit_Example/Pods-WiaTagKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		99DFE298A46A89D1E732F56D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A4725D42490B32DDC75D0EA6 /* Pods-WiaTagKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiaTagKit_Example.release.xcconfig"; path = "Target Support Files/Pods-WiaTagKit_Example/Pods-WiaTagKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A8CC934DE7AD67126E9AF87B /* Pods-WiaTagKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiaTagKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-WiaTagKit_Tests/Pods-WiaTagKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B65A69B11F917AADF31729CA /* Pods_WiaTagKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiaTagKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74C75B672D666231E7C69E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		DFE423FEDC4A33C1F6BAD4EC /* WiaTagKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WiaTagKit.podspec; path = ../WiaTagKit.podspec; sourceTree = "<group>"; };
-		F1C988ECFF3B956C7D85E711 /* Pods-WiaTagKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiaTagKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiaTagKit_Tests/Pods-WiaTagKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE14CD1324386C66007FBAAF /* PeriodicallyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodicallyTimer.swift; sourceTree = "<group>"; };
+		CE14CD1424386C66007FBAAF /* DuplicationValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DuplicationValidator.swift; sourceTree = "<group>"; };
+		D73CDDB465464D5888B28197 /* Pods_WiaTagKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiaTagKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE423FEDC4A33C1F6BAD4EC /* WiaTagKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WiaTagKit.podspec; path = ../WiaTagKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				605073AA966A5670BB6E7FCE /* Pods_WiaTagKit_Example.framework in Frameworks */,
+				8827FE0C9AB6EFEBBF5DB795 /* Pods_WiaTagKit_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3195892304923381AF8359B0 /* Pods_WiaTagKit_Tests.framework in Frameworks */,
+				7DFE84FA4D14437FF7759F32 /* Pods_WiaTagKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,13 +85,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		1EFBA23FC17AB87DB49A694E /* Frameworks */ = {
+		122E661B5730A72EB6B858BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				628FB9411A7717A58DE78C39 /* Pods_WiaTagKit_Example.framework */,
-				496F2CAC0B6D309DFF302FCF /* Pods_WiaTagKit_Tests.framework */,
+				D73CDDB465464D5888B28197 /* Pods_WiaTagKit_Example.framework */,
+				B65A69B11F917AADF31729CA /* Pods_WiaTagKit_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A4CA248FC13FAD012E7FF38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CC3E8FD2000C924D7E2BF29 /* Pods-WiaTagKit_Example.debug.xcconfig */,
+				A4725D42490B32DDC75D0EA6 /* Pods-WiaTagKit_Example.release.xcconfig */,
+				0E3FD7737977DAC21CD51424 /* Pods-WiaTagKit_Tests.debug.xcconfig */,
+				A8CC934DE7AD67126E9AF87B /* Pods-WiaTagKit_Tests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -95,8 +112,8 @@
 				607FACD21AFB9204008FA782 /* Example for WiaTagKit */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				6C5EDA8A8DECD54B66902B7B /* Pods */,
-				1EFBA23FC17AB87DB49A694E /* Frameworks */,
+				2A4CA248FC13FAD012E7FF38 /* Pods */,
+				122E661B5730A72EB6B858BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +129,7 @@
 		607FACD21AFB9204008FA782 /* Example for WiaTagKit */ = {
 			isa = PBXGroup;
 			children = (
+				CE14CD1224386C66007FBAAF /* Services */,
 				0478785721779EE00078EFA6 /* Resources */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -159,15 +177,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		6C5EDA8A8DECD54B66902B7B /* Pods */ = {
+		CE14CD1224386C66007FBAAF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				887D0CFC17B9C3912AD40F38 /* Pods-WiaTagKit_Example.debug.xcconfig */,
-				88E66AD1ECE19C0F9611AD9F /* Pods-WiaTagKit_Example.release.xcconfig */,
-				F1C988ECFF3B956C7D85E711 /* Pods-WiaTagKit_Tests.debug.xcconfig */,
-				01CEC9BA9FC7DAF98F9F2223 /* Pods-WiaTagKit_Tests.release.xcconfig */,
+				CE14CD1324386C66007FBAAF /* PeriodicallyTimer.swift */,
+				CE14CD1424386C66007FBAAF /* DuplicationValidator.swift */,
 			);
-			name = Pods;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,11 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WiaTagKit_Example" */;
 			buildPhases = (
-				107DB7CBD2B4C646863CF976 /* [CP] Check Pods Manifest.lock */,
+				2E6A642640ACDDF82D4EE775 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				CC7D55C832A06257F274608D /* [CP] Embed Pods Frameworks */,
+				352788854065F079610765C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WiaTagKit_Tests" */;
 			buildPhases = (
-				3B341BA5BDFCFF45EC25BF71 /* [CP] Check Pods Manifest.lock */,
+				49C781C9671A599478C4A12F /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -223,10 +239,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3V36J529G4;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3V36J529G4;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -237,6 +255,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -273,16 +292,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		107DB7CBD2B4C646863CF976 /* [CP] Check Pods Manifest.lock */ = {
+		2E6A642640ACDDF82D4EE775 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-WiaTagKit_Example-checkManifestLockResult.txt",
 			);
@@ -291,31 +314,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3B341BA5BDFCFF45EC25BF71 /* [CP] Check Pods Manifest.lock */ = {
+		352788854065F079610765C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WiaTagKit_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CC7D55C832A06257F274608D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WiaTagKit_Example/Pods-WiaTagKit_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WiaTagKit_Example/Pods-WiaTagKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/WiaTagKit/WiaTagKit.framework",
 			);
@@ -326,7 +331,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiaTagKit_Example/Pods-WiaTagKit_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WiaTagKit_Example/Pods-WiaTagKit_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49C781C9671A599478C4A12F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WiaTagKit_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -337,7 +364,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				CE14CD1524386C66007FBAAF /* PeriodicallyTimer.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				CE14CD1724386C66007FBAAF /* DuplicationValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE14CD1624386C66007FBAAF /* PeriodicallyTimer.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				CE14CD1824386C66007FBAAF /* DuplicationValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +462,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -478,44 +510,48 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 887D0CFC17B9C3912AD40F38 /* Pods-WiaTagKit_Example.debug.xcconfig */;
+			baseConfigurationReference = 1CC3E8FD2000C924D7E2BF29 /* Pods-WiaTagKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3V36J529G4;
 				INFOPLIST_FILE = WiaTagKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88E66AD1ECE19C0F9611AD9F /* Pods-WiaTagKit_Example.release.xcconfig */;
+			baseConfigurationReference = A4725D42490B32DDC75D0EA6 /* Pods-WiaTagKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3V36J529G4;
 				INFOPLIST_FILE = WiaTagKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1C988ECFF3B956C7D85E711 /* Pods-WiaTagKit_Tests.debug.xcconfig */;
+			baseConfigurationReference = 0E3FD7737977DAC21CD51424 /* Pods-WiaTagKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3V36J529G4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -536,8 +572,9 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01CEC9BA9FC7DAF98F9F2223 /* Pods-WiaTagKit_Tests.release.xcconfig */;
+			baseConfigurationReference = A8CC934DE7AD67126E9AF87B /* Pods-WiaTagKit_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3V36J529G4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

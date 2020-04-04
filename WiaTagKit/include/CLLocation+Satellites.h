@@ -1,5 +1,5 @@
 //
-//  WTMessageSenderEmpty.m
+//  CLLocation+Satellites.h
 //  SendWiaTagData
 //
 /*
@@ -12,21 +12,14 @@
  work. If not, see <http://creativecommons.org/licenses/by-nd/4.0/>.
  */
 
-#import <Foundation/Foundation.h>
-#import "WTMessageSender.h"
+#import <CoreLocation/CoreLocation.h>
 
-@implementation WTMessageSender (ForcedLoading)
+NS_ASSUME_NONNULL_BEGIN
 
-@end
+@interface CLLocation (Satellites)
 
-@implementation WTMessage (ForcedLoading)
-
-@end
-
-@implementation WTImage (ForcedLoading)
+- (UInt8)wt_approximateCountOfSatellites;
 
 @end
 
-@implementation WTLocation (ForcedLoading)
-
-@end
+NS_ASSUME_NONNULL_END

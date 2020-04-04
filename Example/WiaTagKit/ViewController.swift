@@ -16,38 +16,119 @@ import UIKit
 import WiaTagKit
 
 class ViewController: UIViewController {
-    
-    //Please init sender with your test data
-    let sender = WTMessageSender(host: "193.193.165.165", port: 20963, unitId: "your unit id", password: "your password")
+    // MARK: - Properties
+
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var sendButton: UIButton!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
+
+    private var messageManager: WTMessageManager?
+    private lazy var periodicallyTimer: PeriodicallyTimer = PeriodicallyTimer(timeInterval: 10,
+                                                                              queue: nil)
+    private lazy var duplicationValidator: DuplicationValidator = DuplicationValidator()
+
+    // MARK: - Life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let message = WTMessage { builder in
-            let string = "string"
-            if let data = string.data(using: .utf8) {
-                builder.addParam("data", withBinaryValue: data)
-            }
-            builder.addParam("double0", withDoubleValue: NSNumber(value: 18.48))
-            builder.addParam("float0", withFloatValue: NSNumber(value: 7.40))
-            builder.addParam("int0", withIntValue: NSNumber(value: 12))
-            builder.addParam("long0", withLongValue: NSNumber(value: 1432423))
-            builder.addParam("text0", withText: "asdasd")
-            builder.batteryLevel = 12
-            if let image = UIImage(named: "free_image.jpg"), let data = UIImageJPEGRepresentation(image, 1) {
-                builder.image = WTImage(imageData: data, named: "image.jpg")
-            }
-            builder.isSos = true
-            builder.location = WTLocation(location: CLLocation(latitude: 34, longitude: 53))
-            builder.text = "message"
+
+        setupTableView()
+        setupMessageManager()
+        setupTimer()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardDidChangeFrame(_:)),
+                                               name: UIResponder.keyboardDidChangeFrameNotification,
+                                               object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    // MARK: - Private methods
+
+    func setupTableView() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.dataSource = self
+    }
+
+    func setupMessageManager() {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+
+        messageManager = appDelegate?.messageManager
+        messageManager?.enableAllServices(completion: nil)
+        messageManager?.duplicationValidator = duplicationValidator
+
+        messageManager?.addListener(completion: { [weak self] command in
+            DispatchQueue.main.async(execute: {
+                self?.tableView.reloadData()
+            })
+        })
+    }
+
+    func setupTimer() {
+        periodicallyTimer.completion = { [weak self] in
+            self?.messageManager?.checkUpdates()
         }
-        sender.send(message) { error in
-            guard let error = error else {
-                print("no errors")
-                return
-            }
-            print("error is \(error)")
+
+        periodicallyTimer.resume()
+    }
+
+    // MARK: - Keyboard handler
+
+    @objc func keyboardDidChangeFrame(_ notification: Notification?) {
+        let userInfo = notification?.userInfo
+        let keyboardSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue.size
+
+        UIView.animate(withDuration: 0.33, animations: {
+            self.bottomConstraint.constant = -(keyboardSize.height)
+        })
+    }
+
+    // MARK: - Actions
+
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        let msg = WTMessage(block: { [weak self] builder in
+            builder.time = Date()
+            builder.text = self?.textField.text
+        })
+
+        messageManager?.send(msg) { [weak self] error in
+            DispatchQueue.main.async(execute: {
+                self?.textField.text = nil
+                self?.tableView.reloadData()
+            })
         }
     }
 }
 
+// MARK: - Implementation UITableViewDataSource
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return duplicationValidator.items.count
+    }
+
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default,
+                                   reuseIdentifier: "TableViewCellIdentifier")
+
+        let item = duplicationValidator.items[indexPath.row] as? NSObject
+
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text = item?.description
+
+        return cell
+    }
+}
