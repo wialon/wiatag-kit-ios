@@ -21,9 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype) init __attribute__((unavailable("init not available, call initWithHost:port:deviceId:password instead")));
 + (instancetype) new __attribute__((unavailable("new not available, call initWithHost:port:deviceId:password instead")));
 
-- (void)setLogLevel:(WTLogLevel)logLevel;
-- (void)checkUpdates;
-
 @end
 
 NS_ASSUME_NONNULL_END

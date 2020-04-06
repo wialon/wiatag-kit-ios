@@ -16,22 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol WTSendable <NSObject>
 
 /**
- * Use this method to setup WTSendable object.
- @param host is a host.
- @param port is a port.
- @param deviceId is a unitId.
- @param password is a password.
-
- @code
- [sendableObj initWithHost:@"111.111.111.111" port:1111 deviceId:@"unit_id" password:@"123"];
- @endcode
- */
-- (instancetype)initWithHost:(NSString *)host
-                        port:(NSUInteger)port
-                    deviceId:(NSString *)deviceId
-                    password:(NSString *)password;
-
-/**
  * Use this method to send message.
  @param message is a WTMessage object.
  @param completion is a block to handle completion. If message was sended successfully, it will be executed with nil error, otherwise you can handle an error message.

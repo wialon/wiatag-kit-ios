@@ -30,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         messageManager.setLogLevel(.verbose)
+        messageManager.authorize { error in
+            debugPrint("Authorize with error - \(String(describing:error))")
+        }
 
         return true
     }

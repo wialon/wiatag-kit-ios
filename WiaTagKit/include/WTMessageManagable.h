@@ -11,10 +11,16 @@
 #import "WTRemotable.h"
 #import "WTSendable.h"
 #import "WTConfigurable.h"
+#import "WTInitializable.h"
+#import "WTLogLevel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol WTMessageManagable <WTListenable, WTRemotable, WTSendable, WTConfigurable>
+@protocol WTMessageManagable <WTListenable, WTRemotable, WTSendable, WTConfigurable, WTInitializable>
+
+- (void)setLogLevel:(WTLogLevel)logLevel;
+- (void)checkUpdates;
+- (void)authorize:(baseCompletion)completion;
 
 @end
 
