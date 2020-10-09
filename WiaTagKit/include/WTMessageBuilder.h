@@ -32,13 +32,21 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) WTImage *image;
 @property (nonatomic, strong, nullable) NSString *text;
 @property (nonatomic, strong, nullable) NSNumber *batteryLevel;
+@property (nonatomic, copy, nullable) NSURL *logFileURL;
+@property (nonatomic, copy, nullable) NSURL *configFileURL;
 
-- (void)addParam:(NSString *)key withText:(NSString *)text;
-- (void)addParam:(NSString *)key withBinaryValue:(NSData *)value;
-- (void)addParam:(NSString *)key withIntValue:(NSNumber *)value;
-- (void)addParam:(NSString *)key withFloatValue:(NSNumber *)value;
-- (void)addParam:(NSString *)key withLongValue:(NSNumber *)value;
-- (void)addParam:(NSString *)key withDoubleValue:(NSNumber *)value;
+- (void)addParam:(NSString *)key
+        withText:(NSString *)text;
+- (void)addParam:(NSString *)key
+ withBinaryValue:(NSData *)value;
+- (void)addParam:(NSString *)key
+    withIntValue:(NSNumber *)value;
+- (void)addParam:(NSString *)key
+  withFloatValue:(NSNumber *)value;
+- (void)addParam:(NSString *)key
+   withLongValue:(NSNumber *)value;
+- (void)addParam:(NSString *)key
+ withDoubleValue:(NSNumber *)value;
 
 @end
 

@@ -16,6 +16,8 @@
 @class WTRequestConfig;
 @class WTConfig;
 @class WTRequestLocation;
+@class WTRequestLogFile;
+@class WTCustomMsg;
 
 typedef void (^WTTextMessageHandler)(WTTextMessage *_Nullable);
 typedef void (^WTLocationCoordinateHandler)(WTLocationCoordinate * _Nullable);
@@ -24,6 +26,8 @@ typedef void (^WTServiceHandler)(WTService * _Nullable);
 typedef void (^WTRequestConfigHandler)(WTRequestConfig * _Nullable);
 typedef void (^WTConfigHandler)(WTConfig * _Nullable);
 typedef void (^WTRequestLocationHandler)(WTRequestLocation * _Nullable);
+typedef void (^WTRequestLogFileHandler)(WTRequestLogFile * _Nullable);
+typedef void (^WTCustomMsgHandler)(WTCustomMsg * _Nullable);
 typedef void (^WTAllCommandsHandler)(id<WTIdentifiable> _Nullable);
 
 NS_ASSUME_NONNULL_BEGIN
@@ -113,6 +117,47 @@ locationCoordinateHandler:(nullable WTLocationCoordinateHandler)locationCoordina
 requestConfigHandler:(nullable WTRequestConfigHandler)requestConfigHandler
       configHandler:(nullable WTConfigHandler)configHandler
 requestLocationHandler:(nullable WTRequestLocationHandler)requestLocationHandler;
+
+/**
+ * Use this method to add listener for handle messages. Note: listener should be only one.
+ @param textMessageHandler is a text message handler block.
+ @param locationCoordinateHandler is a location coordinate message handler block.
+ @param torchHandler is a torch message handler block.
+ @param serviceHandler is a service message handler block.
+ @param requestConfigHandler is a request configuration handler block.
+ @param configHandler is a configuration handler block.
+ @param requestLocationHandler is a request location handler block.
+ @param requestLogFileHandler is a request log file handler block.
+ */
+- (void)addListener:(nullable WTTextMessageHandler)textMessageHandler
+locationCoordinateHandler:(nullable WTLocationCoordinateHandler)locationCoordinateHandler
+       torchHandler:(nullable WTTorchHandler)torchHandler
+     serviceHandler:(nullable WTServiceHandler)serviceHandler
+requestConfigHandler:(nullable WTRequestConfigHandler)requestConfigHandler
+      configHandler:(nullable WTConfigHandler)configHandler
+requestLocationHandler:(nullable WTRequestLocationHandler)requestLocationHandler requestLogFileHandler:(nullable WTRequestLogFileHandler)requestLogFileHandler;
+
+/**
+ * Use this method to add listener for handle messages. Note: listener should be only one.
+ @param textMessageHandler is a text message handler block.
+ @param locationCoordinateHandler is a location coordinate message handler block.
+ @param torchHandler is a torch message handler block.
+ @param serviceHandler is a service message handler block.
+ @param requestConfigHandler is a request configuration handler block.
+ @param configHandler is a configuration handler block.
+ @param requestLocationHandler is a request location handler block.
+ @param requestLogFileHandler is a request log file handler block.
+ @param customMsgHandler is a custom message handler block.
+ */
+- (void)addListener:(nullable WTTextMessageHandler)textMessageHandler
+locationCoordinateHandler:(nullable WTLocationCoordinateHandler)locationCoordinateHandler
+       torchHandler:(nullable WTTorchHandler)torchHandler
+     serviceHandler:(nullable WTServiceHandler)serviceHandler
+requestConfigHandler:(nullable WTRequestConfigHandler)requestConfigHandler
+      configHandler:(nullable WTConfigHandler)configHandler
+requestLocationHandler:(nullable WTRequestLocationHandler)requestLocationHandler
+requestLogFileHandler:(nullable WTRequestLogFileHandler)requestLogFileHandler
+customMessageHandler:(nullable WTCustomMsgHandler)customMsgHandler;
 
 /**
  * Use this method to add listener for handle messages. Note: listener should be only one.

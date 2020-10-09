@@ -22,5 +22,7 @@ typedef NS_ENUM(NSUInteger, WTCommandType) {
     WTCommandTypeStopServiceV2,
     WTCommandTypeTorchOn,
     WTCommandTypeTorchOff,
-    WTCommandTypeRequestConfig
+    WTCommandTypeRequestConfig,
+    WTCommandTypeRequestLogFile = 21,
+    WTCommandTypeCustomMsg = 999
 };

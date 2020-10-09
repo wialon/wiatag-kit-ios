@@ -21,6 +21,8 @@
 #import "WTTorch.h"
 #import "WTService.h"
 #import "WTRequestConfig.h"
+#import "WTRequestLogFile.h"
+#import "WTCustomMsg.h"
 #import "WTConfig.h"
 #import "WTRequestLocation.h"
 #import "WTLogLevel.h"
