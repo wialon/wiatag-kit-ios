@@ -32,6 +32,9 @@ WiaTagKit is a lib for sending data for Wialon service.
   s.library = 'z'
   s.vendored_libraries = 'WiaTagKit/libWiaTagSending.a'
   s.requires_arc = true
+
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
   s.frameworks = 'UIKit', 'CoreLocation', 'Foundation'
   s.dependency 'CocoaAsyncSocket', '~> 7.6'
