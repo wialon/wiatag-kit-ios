@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WiaTagKit'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'WiaTagKit is a lib.'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ WiaTagKit is a lib for sending data for Wialon service.
   s.license          = { :type => 'CC BY-ND 4.0', :file => 'LICENSE' }
   s.author           = { 'wialon' => 'development@gurtam.com' }
   s.source           = { :git => "https://github.com/wialon/wiatag-kit-ios.git", :tag => s.version.to_s }
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '10.0'
   
   s.source_files = 'WiaTagKit/include/*.{h,m}'
   
