@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setLogLevel:(WTLogLevel)logLevel;
 - (void)checkUpdates;
 - (void)authorize:(baseCompletion)completion;
+- (void)requestConfig;
 
 @end
 

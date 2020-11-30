@@ -13,44 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol WTConfigurable <NSObject>
 
 /**
- * Use this method to enable chat.
- @param completion is a block to handle completion.
-
  @code
- [remotableObj enableChatWithCompletion:completion];
+ [remotableObj enableRemoteControl:YES andEnableChat:NO completion:completion];
  @endcode
  */
-- (void)enableChatWithCompletion:(nullable baseCompletion)completion;
-
-/**
- * Use this method to disable chat.
- @param completion is a block to handle completion.
-
- @code
- [remotableObj disableChatWithCompletion:completion];
- @endcode
- */
-- (void)disableChatWithCompletion:(nullable baseCompletion)completion;
-
-/**
- * Use this method to enable remote control.
- @param completion is a block to handle completion.
-
- @code
- [remotableObj enableRemoteControlWithCompletion:completion];
- @endcode
- */
-- (void)enableRemoteControlWithCompletion:(nullable baseCompletion)completion;
-
-/**
- * Use this method to disable remote control.
- @param completion is a block to handle completion.
-
- @code
- [remotableObj disableRemoteControlWithCompletion:completion];
- @endcode
- */
-- (void)disableRemoteControlWithCompletion:(nullable baseCompletion)completion;
+- (void)enableRemoteControl:(BOOL)isRCEnabled
+              andEnableChat:(BOOL)isChatEnabled
+                 completion:(nullable baseCompletion)completion;
 
 /**
  * Use this method to enable chat and remote control.
