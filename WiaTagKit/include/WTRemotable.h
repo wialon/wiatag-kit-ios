@@ -39,21 +39,24 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Use this method to register for remote notification after receiving device token.
  @param serviceName is a bundle identifier.
- @param deviceToken is an APNS token.
+ @param apnsToken is an APNS token.
+ @param fcmToken is an FCM token
  @param completion is a block to handle completion. If registration was successfully, it will be executed with nil error, otherwise you can handle an error message
 
  @code
- [remotableObj registerForRemoteNotificationsWithServiceName:[[NSBundle mainBundle] bundleIdentifier] deviceToken:deviceToken completion:completion];
+ [remotableObj registerForRemoteNotificationsWithServiceName:[[NSBundle mainBundle] bundleIdentifier] apnsToke:apnsToke fcmToken:fcmToken completion:completion];
  @endcode
  */
 - (void)registerForRemoteNotificationsWithServiceName:(NSString *)serviceName
-                                          deviceToken:(NSData *)deviceToken
+                                            apnsToken:(NSData *)apnsToken
+                                             fcmToken:(nullable NSData *)fcmToken
                                            completion:(nullable baseCompletion)completion;
 
 /**
  * Use this method to register for remote notification after receiving device token.
  @param serviceName is a bundle identifier.
- @param deviceToken is an APNS token.
+ @param apnsToken is an APNS token.
+ @param fcmToken is an FCM token
  @param completion is a block to handle completion. If registration was successfully, it will be executed with nil error, otherwise you can handle an error message
 
  @code
@@ -61,7 +64,8 @@ NS_ASSUME_NONNULL_BEGIN
  @endcode
  */
 - (void)registerForRemoteNotificationsWithServiceName:(NSString *)serviceName
-                                          deviceTokenStringRepresentation:(NSString *)deviceToken
+                        apnsTokenStringRepresentation:(NSString *)apnsToken
+                         fcmTokenStringRepresentation:(nullable NSString *)fcmToken
                                            completion:(nullable baseCompletion)completion;
 
 /**

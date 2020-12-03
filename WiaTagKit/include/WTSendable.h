@@ -42,7 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Use this method to send remote control configuration.
  @param serviceName is a bundle identifier.
- @param deviceToken is an APNS token.
+ @param apnsToken is an APNS token.
+ @param fcmToken is an FCM token
  @param deviceId is a unitId.
  @param password is a password.
  @param isChatEnabled is an flag for enabling or disabling chat.
@@ -50,11 +51,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion is a block to handle completion. If message was sended successfully, it will be executed with nil error, otherwise you can handle an error message.
 
  @code
- [sendableObj sendRemoteControlWithServiceName:[[NSBundle mainBundle] bundleIdentifier] deviceToken:deviceToken deviceId:@"unit_id" password:@"123" isChatEnabled:true isRemoteControlEnabled:true completion:completion];
+ [sendableObj sendRemoteControlWithServiceName:[[NSBundle mainBundle] bundleIdentifier] apnsToken:apnsToken fcmToken:fcmToken deviceId:@"unit_id" password:@"123" isChatEnabled:true isRemoteControlEnabled:true completion:completion];
  @endcode
  */
 - (void)sendRemoteControlWithServiceName:(NSString *)serviceName
-                             deviceToken:(NSString *)deviceToken
+                               apnsToken:(NSString *)apnsToken
+                                fcmToken:(NSString *)fcmToken
                                 deviceId:(NSString *)deviceId
                                 password:(NSString *)password
                            isChatEnabled:(BOOL)isChatEnabled
