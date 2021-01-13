@@ -13,3 +13,4 @@
  */
 
 #import "WTMessageManager.h"
+#import "WTConfig.h"
