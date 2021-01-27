@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol WTDuplicatable <NSObject>
 
-- (BOOL)isDuplicateWithCommand:(id<WTIdentifiable>)command;
+- (void)checkDuplicationWithCommand:(id<WTIdentifiable>)command
+                         completion:(void(^)(BOOL))completion;
 
 @end
 
