@@ -17,7 +17,8 @@ class DuplicationValidator: NSObject, WTDuplicatable {
 
     // MARK: - Implementation WTDuplicatable
 
-    @objc public func isDuplicate(withCommand command: WTIdentifiable) -> Bool {
+    func checkDuplication(withCommand command: WTIdentifiable,
+                          completion: @escaping (Bool) -> Void) {
         let isDuplicate = items.contains {
             command.identifier == $0.identifier
         }
@@ -26,6 +27,6 @@ class DuplicationValidator: NSObject, WTDuplicatable {
             items.append(command)
         }
 
-        return isDuplicate
+        completion(isDuplicate)
     }
 }
