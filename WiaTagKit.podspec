@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WiaTagKit'
-  s.version          = '0.40'
+  s.version          = '0.41'
   s.summary          = 'WiaTagKit is a lib.'
 
 # This description is used to generate tags and improve search results.
