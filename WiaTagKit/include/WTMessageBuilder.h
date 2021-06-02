@@ -35,6 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSURL *logFileURL;
 @property (nonatomic, copy, nullable) NSURL *configFileURL;
 
+
+@property (nonatomic, copy, nullable) NSData *data __attribute((deprecated("Use other properties instead if you are't sure.")));
+
 - (void)addParam:(NSString *)key
         withText:(NSString *)text;
 - (void)addParam:(NSString *)key
