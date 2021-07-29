@@ -202,7 +202,7 @@ Finally you should check new commands from the platform manually or as feedback 
 sender.checkUpdates()
 ```
 
-5. If you want to receive config from the configurator you need to call this method(if command was complited success you don't receive any kind of errors):
+5. If you want to receive config from the configurator you need to call this method(if command was complited successfully you don't receive any kind of errors):
 ```
 /** OBJECTIVE-C **/
     [sender requestConfig:^(NSError * _Nullable error) {
