@@ -61,14 +61,14 @@ pod 'WiaTagKit'
 
 How To Use the Library
 -------------
-1. Create  a **WTMessageManager** object with **host**, **port**, **unit id** and **password**.
+1. Create  a **WTMessageManager** object with **host**, **port**, **deviceId** and **password**.
 
 ```
 /** OBJECTIVE-C **/
-WTMessageManager *messageManager = [[WTMessageManager alloc] initWithHost:"your_host" port:your_port deviceId:"your_deviceId" password:"your_optional_password"];
+WTMessageManager *sender = [[WTMessageManager alloc] initWithHost:"your_host" port:your_port deviceId:"your_deviceId" password:"your_optional_password"];
 
 /** SWIFT **/
-let messageManager = WTMessageManager(host: "your_host", port: your_port, deviceId: "your_deviceId", password: "your_optional_password")
+let sender = WTMessageManager(host: "your_host", port: your_port, deviceId: "your_deviceId", password: "your_optional_password")
 
 ```
 
