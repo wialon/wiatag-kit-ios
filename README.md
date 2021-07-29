@@ -176,6 +176,18 @@ sender.send(yourArrayOfMessages) { error in
         //handle error if it is necesary
     }
 ```
+5. If you want to receive config from the configurator you need to call this method(if command was complited success you don't receive any kind of errors):
+```
+/** OBJECTIVE-C **/
+    [sender requestConfig:^(NSError * _Nullable error) {
+        //handle error if it is necesary
+    }];
+    
+/** SWIFT **/
+    sender.requestConfig { error in
+        //handle error if it is necesary
+    }
+```
 
 ## Author
 
