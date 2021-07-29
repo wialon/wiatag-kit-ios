@@ -164,6 +164,18 @@ sender.send(yourArrayOfMessages) { error in
 }
 
 ```
+4. If you want to receive messages from the platform you need to call this method:
+```
+/** OBJECTIVE-C **/
+    [sender enableAllServicesWithCompletion:^(NSError * _Nullable error) {
+        //handle error if it is necesary
+    }];
+    
+/** SWIFT **/
+    sender.enableAllServices { error in
+        //handle error if it is necesary
+    }
+```
 
 ## Author
 
