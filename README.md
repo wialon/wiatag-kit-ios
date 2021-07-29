@@ -214,7 +214,31 @@ sender.checkUpdates()
         //handle error if it is necesary
     }
 ```
-6. 
+6. If you want to use push notifications you need to register for it:
+```
+/** OBJECTIVE-C **/
+    [sender registerForRemoteNotificationsWithServiceName:[[NSBundle mainBundle] bundleIdentifier]
+                                                apnsToken:apnsToken
+                                                 fcmToken:fcmToken
+                                               completion:nil];
+/** SWIFT **/
+        sender.registerForRemoteNotifications(withServiceName: serviceName,
+                                              apnsTokenStringRepresentation: apnsToken,
+                                              fcmTokenStringRepresentation: fcmToken,
+                                              completion: nil)
+```
+
+And if you want to receive commands from listener you should handle notification payload in didReceiveRemoteNotification:
+```
+/** OBJECTIVE-C **/
+    [sender handleRemoteNotificationWithDict:testPushUserInfo
+                                  completion:completionHandler];
+/** SWIFT **/
+    sender.handleRemoteNotification(withDict: info,
+                                    completion: completion)
+```
+
+7. If you use both channels(push notifications and tcp) for receiving messages from the platform you should create and set up duplication checker class into sender. For more detail see WTBaseCommandDuplicationValidator class.
 
 ## Author
 
