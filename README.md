@@ -164,6 +164,7 @@ sender.send(yourArrayOfMessages) { error in
 }
 
 ```
+
 4. If you want to receive messages from the platform you need to call this method:
 ```
 /** OBJECTIVE-C **/
@@ -176,6 +177,27 @@ sender.send(yourArrayOfMessages) { error in
         //handle error if it is necesary
     }
 ```
+Than you should implement any kind of listeners for your purposes:
+```
+/** OBJECTIVE-C **/
+    [sender addListenerWithCompletion:^(id<WTIdentifiable> _Nullable command) {
+        //handle command
+    }];
+
+/** SWIFT **/
+    sender.addListener { command in
+        //handle command
+    }
+```
+Finally you should check new commands from the platform manually or as feedback when you send any command:
+```
+/** OBJECTIVE-C **/
+[sender checkUpdates];
+
+/** SWIFT **/
+sender.checkUpdates()
+```
+
 5. If you want to receive config from the configurator you need to call this method(if command was complited success you don't receive any kind of errors):
 ```
 /** OBJECTIVE-C **/
@@ -188,6 +210,7 @@ sender.send(yourArrayOfMessages) { error in
         //handle error if it is necesary
     }
 ```
+6. 
 
 ## Author
 
