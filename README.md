@@ -61,7 +61,7 @@ pod 'WiaTagKit'
 
 How To Use the Library
 -------------
-1. Create  a **WTMessageSender** object with **host**, **port**, **unit id** and **password**.
+1. Create  a **WTMessageManager** object with **host**, **port**, **unit id** and **password**.
 
 ```
 /** OBJECTIVE-C **/
