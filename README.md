@@ -65,10 +65,10 @@ How To Use the Library
 
 ```
 /** OBJECTIVE-C **/
-WTMessageSender *sender = [[WTMessageSender alloc] initWithHost:host port:port unitId:unitId password:password];
+WTMessageManager *messageManager = [[WTMessageManager alloc] initWithHost:"your_host" port:your_port deviceId:"your_deviceId" password:"your_optional_password"];
 
 /** SWIFT **/
-let sender = WTMessageSender(host: host, port: port, unitId: yourUnitId, password: yourPassword)
+let messageManager = WTMessageManager(host: "your_host", port: your_port, deviceId: "your_deviceId", password: "your_optional_password")
 
 ```
 
