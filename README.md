@@ -85,6 +85,8 @@ WTMessage *msg = [[WTMessage alloc] initWithBlock:^(WTMessageBuilder * _Nonnull 
     }
     builder.text = yourText;
     builder.batteryLevel = yourBatteryLevel;
+    builder.logFileURL = logFileURL; //(json file with file extension .log)
+    builder.configFileURL = configFileURL; //(json file with file extension .cfg)
     //If you specify different values with one param name, just one value will be sent. So avoid doing this. 
     [builder addParam:yourTextParamName withText:yourTextParamValue];
     [builder addParam:yourBinaryParamName withBinaryValue:yourBinaryParamValue];
@@ -104,6 +106,8 @@ let message = WTMessage { builder in
     }
     builder.text = yourText
     builder.batteryLevel = yourBatteryLevel
+    builder.logFileURL = logFileURL //(json file with file extension .log)
+    builder.configFileURL = configFileURL //(json file with file extension .cfg)
     //If you specify different values with one param name, just one value will be sent. So avoid doing this.
     builder.addParam(yourTextParamName, withText: yourTextParamValue)
     builder.addParam(yourBinaryParamName, withBinaryValue: yourBinaryParamValue)
