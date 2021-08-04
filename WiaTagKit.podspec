@@ -25,7 +25,7 @@ WiaTagKit is a lib for sending data for Wialon service.
   s.license          = { :type => 'CC BY-ND 4.0', :file => 'LICENSE' }
   s.author           = { 'wialon' => 'development@gurtam.com' }
   s.source           = { :git => "https://github.com/wialon/wiatag-kit-ios.git", :tag => s.version.to_s }
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
   
   s.source_files = 'WiaTagKit/include/*.{h,m}'
   
