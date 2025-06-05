@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WiaTagKit'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'WiaTagKit is a lib.'
 
 # This description is used to generate tags and improve search results.
@@ -24,10 +24,10 @@ WiaTagKit is a lib for sending data for Wialon service.
   s.homepage         = 'https://github.com/wialon/wiatag-kit-ios'
   s.license          = { :type => 'CC BY-ND 4.0', :file => 'LICENSE' }
   s.author           = { 'wialon' => 'development@gurtam.com' }
-  s.source           = { :http => "https://github.com/wialon/wiatag-kit-ios/releases/download/#{s.version.to_s}/WiaTagSendingLib.xcframework.zip" }
+  s.source           = { :http => "https://github.com/wialon/wiatag-kit-ios/releases/download/#{s.version.to_s}/WiaTagKit.xcframework.zip" }
   s.ios.deployment_target = '13.0'
   s.swift_version    = '5.0'
- # s.vendored_frameworks = 'WiaTagSendingLib.xcframework'
+ # s.vendored_frameworks = 'WiaTagKit.xcframework'
 
   s.library = 'z'
 
