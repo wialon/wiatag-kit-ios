@@ -1,0 +1,274 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name WiaTagKit
+import CocoaAsyncSocket
+import Compression
+import CoreLocation
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import zlib
+@_hasMissingDesignatedInitializers final public class WTService : WiaTagKit.WTBaseCommand {
+  final public let state: WiaTagKit.WTServiceState
+  final public let executionTime: Foundation.TimeInterval
+  override final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTConfig : WiaTagKit.WTBaseCommand {
+  final public let settings: [Swift.String : Any]
+  override final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@objc final public class WTLocation : ObjectiveC.NSObject {
+  @objc final public let latitude: Swift.Double
+  @objc final public let longitude: Swift.Double
+  @objc final public let altitude: Swift.Double
+  @objc final public let speed: Swift.UInt16
+  @objc final public let bearing: Swift.UInt16
+  @objc final public let satellites: Swift.UInt8
+  public init(latitude: Swift.Double, longitude: Swift.Double, altitude: Swift.Double = 0, speed: Swift.UInt16 = 0, bearing: Swift.UInt16 = 0, satellites: Swift.UInt8 = 1)
+  convenience public init(location: CoreLocation.CLLocation)
+  @objc deinit
+}
+extension CoreLocation.CLLocation {
+  public var approximateCountOfSatellites: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTTextMessage : WiaTagKit.WTBaseCommand {
+  final public let body: Swift.String
+  override final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTRequestPhotoFromCamera : WiaTagKit.WTBaseCommand {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class WTCommandsListener : WiaTagKit.WTCommandsListenable {
+  final public func listenAll(_ completion: @escaping (WiaTagKit.WTBaseCommand) -> Swift.Void)
+  final public func listen(textHandler: ((WiaTagKit.WTTextMessage?) -> Swift.Void)?, locationCoordinateHandler: ((WiaTagKit.WTLocationCoordinate?) -> Swift.Void)?, torchHandler: ((WiaTagKit.WTTorch?) -> Swift.Void)?, serviceHandler: ((WiaTagKit.WTService?) -> Swift.Void)?, requestConfigHandler: ((WiaTagKit.WTRequestConfig?) -> Swift.Void)?, configHandler: ((WiaTagKit.WTConfig?) -> Swift.Void)?, requestLocationHandler: ((WiaTagKit.WTRequestLocation?) -> Swift.Void)?, requestLogFileHandler: ((WiaTagKit.WTRequestLogFile?) -> Swift.Void)?, customMessageHandler: ((WiaTagKit.WTCustomMsg?) -> Swift.Void)?, requestPhotoHandler: ((WiaTagKit.WTRequestPhoto?) -> Swift.Void)?, requestPhotoFromCameraHandler: ((WiaTagKit.WTRequestPhotoFromCamera?) -> Swift.Void)?)
+  final public func removeListener()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTCustomMsg : WiaTagKit.WTBaseCommand {
+  final public let content: Swift.String
+  override final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public enum WTServiceState : Swift.Int {
+  case start
+  case stop
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTRequestLogFile : WiaTagKit.WTBaseCommand {
+  final public let from: Foundation.TimeInterval
+  final public let to: Foundation.TimeInterval
+  override final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTRequestLocation : WiaTagKit.WTBaseCommand {
+  @objc deinit
+}
+@objc final public class WTImageData : ObjectiveC.NSObject {
+  @objc final public let data: Foundation.Data
+  @objc final public let name: Swift.String
+  public init(data: Foundation.Data, name: Swift.String?)
+  @objc deinit
+}
+public protocol WTMessageManagable : WiaTagKit.WTCommandsListenable, WiaTagKit.WTConfigurable, WiaTagKit.WTMessageSendable, WiaTagKit.WTRemoteNotifiable {
+  func checkUpdates()
+  func setLogLevel(_ level: WiaTagKit.WTLogLevel)
+}
+final public class WTMessageManager : WiaTagKit.WTMessageManagable {
+  final public var duplicationValidator: any WiaTagKit.WTDuplicatable
+  public init(host: Swift.String, port: Swift.UInt, deviceId: Swift.String, password: Swift.String?)
+  @objc deinit
+  final public func checkUpdates()
+  final public func setLogLevel(_ logLevel: WiaTagKit.WTLogLevel)
+  final public func enableRemoteControl(_ isEnabled: Swift.Bool, isChatEnabled: Swift.Bool, _ completion: WiaTagKit.baseCompletion?)
+  final public func enableAllServices(completion: WiaTagKit.baseCompletion?)
+  final public func disableAllServices(completion: WiaTagKit.baseCompletion?)
+  final public func requestConfig(_ completion: WiaTagKit.baseCompletion?)
+  final public func authorize(_ completion: WiaTagKit.baseCompletion?)
+  final public func send(_ message: WiaTagKit.WTMessage, _ completion: WiaTagKit.baseCompletion?)
+  final public func send(_ messages: [WiaTagKit.WTMessage], _ completion: WiaTagKit.sendMessagesCompletion?)
+  final public func sendRemoteControl(with serviceName: Swift.String?, fcmToken: Swift.String?, apnsToken: Swift.String?, deviceId: Swift.String, password: Swift.String?, isChatEnabled: Swift.Bool, isRemoteControlEnabled: Swift.Bool, _ completion: WiaTagKit.baseCompletion?)
+  final public func disconnect()
+  final public func restart()
+  final public func listen(textHandler: ((WiaTagKit.WTTextMessage?) -> Swift.Void)?, locationCoordinateHandler: ((WiaTagKit.WTLocationCoordinate?) -> Swift.Void)?, torchHandler: ((WiaTagKit.WTTorch?) -> Swift.Void)?, serviceHandler: ((WiaTagKit.WTService?) -> Swift.Void)?, requestConfigHandler: ((WiaTagKit.WTRequestConfig?) -> Swift.Void)?, configHandler: ((WiaTagKit.WTConfig?) -> Swift.Void)?, requestLocationHandler: ((WiaTagKit.WTRequestLocation?) -> Swift.Void)?, requestLogFileHandler: ((WiaTagKit.WTRequestLogFile?) -> Swift.Void)?, customMessageHandler: ((WiaTagKit.WTCustomMsg?) -> Swift.Void)?, requestPhotoHandler: ((WiaTagKit.WTRequestPhoto?) -> Swift.Void)?, requestPhotoFromCameraHandler: ((WiaTagKit.WTRequestPhotoFromCamera?) -> Swift.Void)?)
+  final public func listenAll(_ completion: @escaping (WiaTagKit.WTBaseCommand) -> Swift.Void)
+  final public func removeListener()
+  final public func registerForRemoteNotifications(with serviceName: Swift.String, fcmToken: Swift.String, completion: WiaTagKit.baseCompletion?)
+  final public func registerForRemoteNotifications(with serviceName: Swift.String, apnsToken: Swift.String, completion: WiaTagKit.baseCompletion?)
+  final public func registerForRemoteNotifications(withServiceName: Swift.String, apnsTokenStringRepresentation: Swift.String, fcmTokenStringRepresentation: Swift.String?, completion: WiaTagKit.baseCompletion?)
+  final public func registerForRemoteNotifications(with serviceName: Swift.String, fcmToken: Foundation.Data?, apnsToken: Foundation.Data?, completion: WiaTagKit.baseCompletion?)
+  final public func registerForRemoteNotifications(with application: UIKit.UIApplication)
+  final public func registerForRemoteNotifications(with application: UIKit.UIApplication, completion: WiaTagKit.emptyCompletion?)
+  final public func unregisterForRemoteNotifications(with application: UIKit.UIApplication)
+  final public func handleRemoteNotification(info: [Swift.String : Any], completion: (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+}
+extension WiaTagKit.WTMessageManager : Swift.Equatable {
+  public static func == (lhs: WiaTagKit.WTMessageManager, rhs: WiaTagKit.WTMessageManager) -> Swift.Bool
+}
+@objc final public class WTMessage : ObjectiveC.NSObject {
+  final public var bodyData: Foundation.NSData
+  public init(builder: WiaTagKit.WTMessageBuilder)
+  convenience public init(block: ((WiaTagKit.WTMessageBuilder) -> Swift.Void))
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class WTErrorFactory {
+  @objc deinit
+}
+public protocol WTConfigurable : AnyObject {
+  func enableRemoteControl(_ isEnabled: Swift.Bool, isChatEnabled: Swift.Bool, _ completion: WiaTagKit.baseCompletion?)
+  func enableAllServices(completion: WiaTagKit.baseCompletion?)
+  func disableAllServices(completion: WiaTagKit.baseCompletion?)
+}
+public protocol WTCommandsListenable : AnyObject {
+  func listen(textHandler: ((WiaTagKit.WTTextMessage?) -> Swift.Void)?, locationCoordinateHandler: ((WiaTagKit.WTLocationCoordinate?) -> Swift.Void)?, torchHandler: ((WiaTagKit.WTTorch?) -> Swift.Void)?, serviceHandler: ((WiaTagKit.WTService?) -> Swift.Void)?, requestConfigHandler: ((WiaTagKit.WTRequestConfig?) -> Swift.Void)?, configHandler: ((WiaTagKit.WTConfig?) -> Swift.Void)?, requestLocationHandler: ((WiaTagKit.WTRequestLocation?) -> Swift.Void)?, requestLogFileHandler: ((WiaTagKit.WTRequestLogFile?) -> Swift.Void)?, customMessageHandler: ((WiaTagKit.WTCustomMsg?) -> Swift.Void)?, requestPhotoHandler: ((WiaTagKit.WTRequestPhoto?) -> Swift.Void)?, requestPhotoFromCameraHandler: ((WiaTagKit.WTRequestPhotoFromCamera?) -> Swift.Void)?)
+  func listenAll(_ completion: @escaping (WiaTagKit.WTBaseCommand) -> Swift.Void)
+  func removeListener()
+}
+extension WiaTagKit.WTCommandsListenable {
+  public func listen(textHandler: ((WiaTagKit.WTTextMessage?) -> Swift.Void)? = nil, locationCoordinateHandler: ((WiaTagKit.WTLocationCoordinate?) -> Swift.Void)? = nil, torchHandler: ((WiaTagKit.WTTorch?) -> Swift.Void)? = nil, serviceHandler: ((WiaTagKit.WTService?) -> Swift.Void)? = nil, requestConfigHandler: ((WiaTagKit.WTRequestConfig?) -> Swift.Void)? = nil, configHandler: ((WiaTagKit.WTConfig?) -> Swift.Void)? = nil, requestLocationHandler: ((WiaTagKit.WTRequestLocation?) -> Swift.Void)? = nil, requestLogFileHandler: ((WiaTagKit.WTRequestLogFile?) -> Swift.Void)? = nil, customMessageHandler: ((WiaTagKit.WTCustomMsg?) -> Swift.Void)? = nil, requestPhotoHandler: ((WiaTagKit.WTRequestPhoto?) -> Swift.Void)? = nil, requestPhotoFromCameraHandler: ((WiaTagKit.WTRequestPhotoFromCamera?) -> Swift.Void)? = nil)
+}
+@_hasMissingDesignatedInitializers final public class WTErrorHandler {
+  @objc deinit
+}
+public typealias baseCompletion = ((any Swift.Error)?) -> Swift.Void
+public typealias emptyCompletion = () -> Swift.Void
+public typealias sendMessagesCompletion = ((any Swift.Error)?, [WiaTagKit.WTMessage]?) -> Swift.Void
+public protocol WTIdentifiable {
+  var identifier: Swift.String { get }
+  var time: Foundation.TimeInterval { get }
+}
+public enum WTTorchState : Swift.Int {
+  case unknown
+  case on
+  case off
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Foundation.Data {
+  public func compressed(using algo: Compression.compression_algorithm = COMPRESSION_ZLIB, pageSize: Swift.Int = 128) throws -> Foundation.Data
+  public func decompressed(from algo: Compression.compression_algorithm = COMPRESSION_ZLIB, pageSize: Swift.Int = 16384) throws -> Foundation.Data
+  public func _legacyCompressed(using algo: Compression.compression_algorithm = COMPRESSION_ZLIB, pageSize: Swift.Int = 128) throws -> Foundation.Data
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTTorch : WiaTagKit.WTBaseCommand {
+  final public let state: WiaTagKit.WTTorchState
+  override final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTRequestConfig : WiaTagKit.WTBaseCommand {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class WTMessageBuilder {
+  final public var time: Foundation.Date?
+  final public var location: WiaTagKit.WTLocation?
+  final public var isSos: Swift.Bool
+  final public var image: WiaTagKit.WTImageData?
+  final public var text: Swift.String?
+  final public var batteryLevel: Swift.Int?
+  final public var logFileURL: Foundation.URL?
+  final public var configFileURL: Foundation.URL?
+  final public var data: Foundation.Data?
+  final public func addParam(_ key: Swift.String, withText: Swift.String)
+  final public func addParam(_ param: Foundation.Data, key: Swift.String)
+  final public func addParam(_ key: Swift.String, withIntValue: Swift.Int)
+  final public func addParam(_ param: Swift.UInt, key: Swift.String)
+  final public func addParam(_ param: Swift.Float, key: Swift.String)
+  final public func addParam(_ param: Swift.Double, key: Swift.String)
+  @objc deinit
+}
+public enum WTLogLevel : Swift.UInt {
+  case off
+  case info
+  case verbose
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTRequestPhoto : WiaTagKit.WTBaseCommand {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class WTLocationCoordinate : WiaTagKit.WTBaseCommand {
+  final public let latitude: Swift.Double
+  final public let longitude: Swift.Double
+  final public let title: Swift.String
+  final public let message: Swift.String
+  override final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class WTLogger : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public protocol WTRemoteNotifiable : AnyObject {
+  func registerForRemoteNotifications(with application: UIKit.UIApplication)
+  func registerForRemoteNotifications(with application: UIKit.UIApplication, completion: WiaTagKit.emptyCompletion?)
+  func registerForRemoteNotifications(withServiceName: Swift.String, apnsTokenStringRepresentation: Swift.String, fcmTokenStringRepresentation: Swift.String?, completion: WiaTagKit.baseCompletion?)
+  func registerForRemoteNotifications(with serviceName: Swift.String, fcmToken: Foundation.Data?, apnsToken: Foundation.Data?, completion: WiaTagKit.baseCompletion?)
+  func unregisterForRemoteNotifications(with application: UIKit.UIApplication)
+  func handleRemoteNotification(info: [Swift.String : Any], completion: (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+}
+public protocol WTMessageSendable : AnyObject {
+  func requestConfig(_ completion: WiaTagKit.baseCompletion?)
+  func authorize(_ completion: WiaTagKit.baseCompletion?)
+  func send(_ message: WiaTagKit.WTMessage, _ completion: WiaTagKit.baseCompletion?)
+  func send(_ messages: [WiaTagKit.WTMessage], _ completion: WiaTagKit.sendMessagesCompletion?)
+  func sendRemoteControl(with serviceName: Swift.String?, fcmToken: Swift.String?, apnsToken: Swift.String?, deviceId: Swift.String, password: Swift.String?, isChatEnabled: Swift.Bool, isRemoteControlEnabled: Swift.Bool, _ completion: WiaTagKit.baseCompletion?)
+  func disconnect()
+  func restart()
+}
+@_hasMissingDesignatedInitializers public class WTBaseCommand : WiaTagKit.WTIdentifiable, Swift.Equatable, Swift.CustomStringConvertible {
+  public var identifier: Swift.String {
+    get
+    set
+  }
+  public var time: Foundation.TimeInterval
+  public var description: Swift.String {
+    get
+  }
+  public static func == (lhs: WiaTagKit.WTBaseCommand, rhs: WiaTagKit.WTBaseCommand) -> Swift.Bool
+  @objc deinit
+}
+public protocol WTDuplicatable {
+  func checkDuplication(withCommand command: any WiaTagKit.WTIdentifiable, completion: @escaping (Swift.Bool) -> Swift.Void)
+}
+extension WiaTagKit.WTServiceState : Swift.Equatable {}
+extension WiaTagKit.WTServiceState : Swift.Hashable {}
+extension WiaTagKit.WTServiceState : Swift.RawRepresentable {}
+extension WiaTagKit.WTTorchState : Swift.Equatable {}
+extension WiaTagKit.WTTorchState : Swift.Hashable {}
+extension WiaTagKit.WTTorchState : Swift.RawRepresentable {}
+extension WiaTagKit.WTLogLevel : Swift.Equatable {}
+extension WiaTagKit.WTLogLevel : Swift.Hashable {}
+extension WiaTagKit.WTLogLevel : Swift.RawRepresentable {}
