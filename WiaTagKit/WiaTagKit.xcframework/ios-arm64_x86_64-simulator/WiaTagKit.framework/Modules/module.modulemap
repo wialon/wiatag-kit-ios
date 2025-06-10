@@ -1,0 +1,6 @@
+framework module WiaTagKit {
+  umbrella header "WiaTagKit.h"
+  export *
+
+  module * { export * }
+}
