@@ -11426,63 +11426,63 @@
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "StringLiteral",
-      "offset": 767,
+      "offset": 938,
       "length": 24,
       "value": "\"delegate.network.queue\""
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "StringLiteral",
-      "offset": 827,
+      "offset": 998,
       "length": 35,
       "value": "\"com.gurtam.SocketServiceWorkQueue\""
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "StringLiteral",
-      "offset": 906,
+      "offset": 1077,
       "length": 43,
       "value": "\"com.gurtam.SocketServicePacketAccessQueue\""
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "StringLiteral",
-      "offset": 983,
+      "offset": 1154,
       "length": 10,
       "value": "\"packetID\""
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1032,
+      "offset": 1203,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1332,
+      "offset": 1503,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1370,
+      "offset": 1541,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1682,
+      "offset": 1853,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2062,
+      "offset": 2233,
       "length": 5,
       "value": "false"
     },
