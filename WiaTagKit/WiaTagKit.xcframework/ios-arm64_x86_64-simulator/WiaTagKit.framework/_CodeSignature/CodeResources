@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		IYzwwNkihUVJq9+/6J1G/04olgc=
+		L14lBpnkPZZbHry8q82rnCxSPbo=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UbUbSBjZDsAweAlNgXyz7IpDHT0=
+		RfNf+fWios7vHI5Y9+GEu9LWf9k=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		IYzwwNkihUVJq9+/6J1G/04olgc=
+		L14lBpnkPZZbHry8q82rnCxSPbo=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		g3ChbOXmo0BSQbWtSpHGKHuqufg=
+		YkE7r0GH0gxNeDbAUxCy5Uifu2w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qf6WO2WaV/ScV+LfKuycTpCrDqjr26W0MOUMBAi3IU8=
+			wH+S6H72Mmou62AG7EL+r0HaGSXPD0wl4m2Zb7AwKyY=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LktgeFF+qe6jrkAS90ikMWaiNHl7eIX+z25qAi9DUAw=
+			QG1USSadVD/zLxLpaEL+lM/lnjZcmx/mLy4lCPNJ2Kw=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qf6WO2WaV/ScV+LfKuycTpCrDqjr26W0MOUMBAi3IU8=
+			wH+S6H72Mmou62AG7EL+r0HaGSXPD0wl4m2Zb7AwKyY=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			noRXY2XAxQTOHBT+OpyTaKCtcGj31ytCXQfHa4ORkHg=
+			fAnRYEBHK2Jv8K94JrhH1Ci8D6uMphsYmqvlgzVPu+s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

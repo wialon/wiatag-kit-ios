@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		IYzwwNkihUVJq9+/6J1G/04olgc=
+		L14lBpnkPZZbHry8q82rnCxSPbo=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NxO0ESrSdNx3sOMWd3gPVCd0kFc=
+		Qrv/TLyAfr/BlI1pFyj41fuEoWs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qf6WO2WaV/ScV+LfKuycTpCrDqjr26W0MOUMBAi3IU8=
+			wH+S6H72Mmou62AG7EL+r0HaGSXPD0wl4m2Zb7AwKyY=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hosxNBSf+vwYBw2K4dYJ6emQOj3QeSZ4OletcqJcz7A=
+			Lc7K0RrcU2+jYDwTGby+ZM8hZvFp923euCKQHaUPVtw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

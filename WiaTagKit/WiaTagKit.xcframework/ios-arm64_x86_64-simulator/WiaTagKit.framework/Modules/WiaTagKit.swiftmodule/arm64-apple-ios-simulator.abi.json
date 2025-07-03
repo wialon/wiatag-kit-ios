@@ -11474,15 +11474,8 @@
     },
     {
       "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1853,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/bute\/Documents\/Projects\/ios_libs_release\/WiaTagKit-Source\/WiaTagKit\/Core\/WTSocketService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2233,
+      "offset": 2161,
       "length": 5,
       "value": "false"
     },
