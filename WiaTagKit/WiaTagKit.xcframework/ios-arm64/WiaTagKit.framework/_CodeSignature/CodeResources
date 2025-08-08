@@ -10,27 +10,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mrrElOYQjVmTV5Q3ja/sMF92gSM=
+		iUQ24zEDCKEW9yifej92YhD9cE8=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		L14lBpnkPZZbHry8q82rnCxSPbo=
+		7/UFTqCm27qPJMMP0eyJNS6K51E=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		k8tdFZO46jibLRhY16ZhkueH7mQ=
+		2XuT0cZjO2la1/aIt7EgvP6S0dw=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		ZV+F0NfjNIMjyoe4Og2YhkXko24=
+		UQ9jYT3NaPUP4ttxnA7iOhqq0yQ=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		k8tdFZO46jibLRhY16ZhkueH7mQ=
+		2XuT0cZjO2la1/aIt7EgvP6S0dw=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Qrv/TLyAfr/BlI1pFyj41fuEoWs=
+		sHCZ8wJT9P7ddcLOBVWMKqTjNAo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,35 +50,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wH+S6H72Mmou62AG7EL+r0HaGSXPD0wl4m2Zb7AwKyY=
+			VBrDSQTMlgd5MzExUt5JfBbJUhs5RLmInX2Uc+VNpfw=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UUsiQZeh3b6rZDkVV7ud8draump4iRUqbon5TkZbWGE=
+			SDyOyrEYsbKW1ru0GztIzYhP7wy+P7hdlBnxhe2umaE=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JJxPhqzyulwBHAFmrT9e0Mb5TXjCECnGi8gIgm2Gxos=
+			NCfDlOh8MUbmeozY8JIigSeuRL0LTu6t0XNtU+NIZKg=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UUsiQZeh3b6rZDkVV7ud8draump4iRUqbon5TkZbWGE=
+			SDyOyrEYsbKW1ru0GztIzYhP7wy+P7hdlBnxhe2umaE=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lc7K0RrcU2+jYDwTGby+ZM8hZvFp923euCKQHaUPVtw=
+			NSNtAT/WMMpckmKadjTKqODYfip2U3dCcRdf8YQXETg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
