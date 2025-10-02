@@ -10,47 +10,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3vNHxQw13AmlVsATmVGLuaT4lZU=
+		danwwxhIfqLdMoCHXJdpNZFDpUU=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		LxeTlSnkHu4kAhJ4t+Ejvr/9OLs=
+		xEEh9u3bTzL1h7/RRBiN3y+A42I=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/BiS7TjN/BYZ+FigsUMl/DCvBK0=
+		KaGVy0W9ZKDAc9vEDybvFD5xsh0=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		YJO0LX7kvuaX8v7A1TakB3vZVOU=
+		EztIpnjUmwqSB31IGNzHpQryxUg=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/BiS7TjN/BYZ+FigsUMl/DCvBK0=
+		KaGVy0W9ZKDAc9vEDybvFD5xsh0=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		neK1603OJMMBUhBsXJ7MDL0Ag1Y=
+		zchEtp28p6mGm8dg4sJTqsghlEU=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		LxeTlSnkHu4kAhJ4t+Ejvr/9OLs=
+		xEEh9u3bTzL1h7/RRBiN3y+A42I=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		JMU6r64f5Tk2BpZlgbHimXRZKdU=
+		mmo2j6hv4lHgnn/SOBY/Bz4y5aE=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		sQodBXvWqaPGT4T3J7eC5wLEUzg=
+		z938mhDLWEqf3/HVv1B2r9KWwH8=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		JMU6r64f5Tk2BpZlgbHimXRZKdU=
+		mmo2j6hv4lHgnn/SOBY/Bz4y5aE=
 		</data>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ciOLDf4NH5DgQdVHrYo1jJ8UF/c=
+		O7mLCR5fm53q+XGm0E/aSUHuDJA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,70 +70,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0dWwT4NP2L8UMN6A58LDyy5q/pCFSPCNVjIFvybxjh4=
+			ZMEjbPWbKMZ5BIZ0GR2lKTVc40Hhjm+ZFLT08ZX1ouI=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			11D3+TVBEF+ARdo9OgrNI2op/7ctvTGMs3jxzAdZDNc=
+			tAoUyGnM4MKmSusWDhUcd9oMr4YFIfd+7o+MLtV2ph8=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a3pDHrUsf2f6iiX3O9KI0c+r7yh9WxLqN9dyNsdCmh0=
+			nllljtLjSJOlZHkT94GZOlU+yLqNZKLq8slKan4wTjQ=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			11D3+TVBEF+ARdo9OgrNI2op/7ctvTGMs3jxzAdZDNc=
+			tAoUyGnM4MKmSusWDhUcd9oMr4YFIfd+7o+MLtV2ph8=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q8fzt03snkyeB+cMsm9xFBUU7xsZEQ73p6azMpSm1bg=
+			wKDJNineZvQzvRegy9nAI/i8bP8kAQR4+RLZ5BCkLgg=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0dWwT4NP2L8UMN6A58LDyy5q/pCFSPCNVjIFvybxjh4=
+			ZMEjbPWbKMZ5BIZ0GR2lKTVc40Hhjm+ZFLT08ZX1ouI=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Yrg8kMm0XRFw1gMSGc1/TvViD8ljCoq9OKu2Th4dBQ=
+			M4RNLpUG6+eWfGIMlS6WjSS0Ty9BPrP5hXcMH7+xwjQ=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pKNprjBbyN7wMV0jm6ahoDw4ezG5lgHLQ4Ksr47x4eQ=
+			UQNGTm7H8vEYiS0BFWL7Jrepzd0SUd3/cdS4PeLmiic=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Yrg8kMm0XRFw1gMSGc1/TvViD8ljCoq9OKu2Th4dBQ=
+			M4RNLpUG6+eWfGIMlS6WjSS0Ty9BPrP5hXcMH7+xwjQ=
 			</data>
 		</dict>
 		<key>Modules/WiaTagKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ibYlMxget2EwXDAD8yTTBhXNmzXV5zbD94ZhRttdA08=
+			z78ke8UmLApBVk9CA50lyNaICHBP53lVW4J+brJ68i4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
