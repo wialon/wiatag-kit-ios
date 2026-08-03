@@ -59,6 +59,24 @@ it, simply add the following line to your Podfile:
 pod 'WiaTagKit'
 ```
 
+## Installation using Swift Package Manager
+
+WiaTagKit is available as a binary Swift package starting from version 1.0.10.
+
+In Xcode select File → Add Package Dependencies… and enter the package URL:
+
+```
+https://github.com/wialon/wiatag-kit-ios.git
+```
+
+Or add the dependency to your Package.swift:
+
+```swift
+.package(url: "https://github.com/wialon/wiatag-kit-ios.git", from: "1.0.10")
+```
+
+The package already bundles the prebuilt CocoaAsyncSocket.xcframework required by WiaTagKit (see WiaTagKit/CocoaAsyncSocket-LICENSE.txt). Do not add the CocoaAsyncSocket package to your project separately, otherwise you will get a duplicate module error.
+
 How To Use the Library
 -------------
 1. Create  a **WTMessageManager** object with **host**, **port**, **deviceId** and **password**.
